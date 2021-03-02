@@ -19,8 +19,8 @@
 			
 			<?php echo( $_SERVER["PHP_SELF"] ); ?>
 			
-			<a href="ex7_slutkod.php?linkSend=true&linkTest=Alltid med...">Send</a>
-			<a href="ex7_slutkod.php?linkDemo=true&linkTest=alltid med...">Demonstraion</a>
+			<a href="ex7.php?linkRollOneDice=true&linkTest=linkTest hittar du oavsett länk!">One Dice</a>
+			<a href="ex7.php?linkRollSixDices=true&linkTest=linkTest hittar du oavsett länk!">Six Dices</a>
 		
 			<?php
 				//Här kommer koden...

@@ -16,10 +16,10 @@
 
 			<?php echo( $_SERVER["PHP_SELF"] ); ?>
 			
-			<form action="ex6_slutkod.php" method="post"> 
-				<input type="submit" name="btnSend" value="Send" />
-				<input type="submit" name="btnDemo" value="Demonstration" />
-				<input type="hidden" name="hidDemo" value="Alltid med..." />
+			<form action="ex6.php" method="post"> 
+				<input type="submit" name="btnRollOneDice" value="One Dice" />
+				<input type="submit" name="btnRollSixDices" value="Six Dices" />
+				<input type="hidden" name="hiddenValue" value="hiddenValue hittar du oavsett submitknapp!" />
 			</form>
 
 			<?php
