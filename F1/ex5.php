@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>F1 Exempel 5</title>
+		<style>
+			img { width: 10%; height: 10%; }
+		</style>
 	</head>
 	<body>
 		<div>
@@ -14,10 +17,10 @@
 				include( "include/SixDices.php" );
 				
 				$oSixDices = new SixDices();
-				$oSixDices->dumpDices();
+				//$oSixDices->dumpDices();
 				
 				$oSixDices->rollDices();
-				$oSixDices->dumpDices();
+				//$oSixDices->dumpDices();
 				
 				echo( "<p>Summan är " . $oSixDices->sumDices() . "!</p>" );
 				

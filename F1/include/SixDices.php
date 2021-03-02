@@ -15,7 +15,7 @@
 			}
 		}
 		
-		function svgDices() {
+		public function svgDices() {
 				
 			/*	
 				<img src="https://openclipart.org/download/282132/Die6.svg" />
@@ -42,7 +42,7 @@
 			
 		}
 		
-		function sumDices() {
+		public function sumDices() {
 			
 			$sum = 0;
 			
@@ -53,7 +53,7 @@
 			return $sum;
 		}
 		
-		function dumpDices() {
+		public function dumpDices() {
 			echo( "<pre>" );
 			print_r( $this->sixDices ); 
 
