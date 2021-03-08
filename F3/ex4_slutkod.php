@@ -23,7 +23,68 @@
 
 	}
 
+	session_start();
+
+	//defaultvärde för CSS-elementet
+	$css = "body { color: rgb(0,0,0); background-color: rgb(255,255,255); }";
+
+	//Flagga för om knappen skall vara användbar eller inte
+	$disabled = true;
+
 	//Här kommer koden...
+	if( isset($_POST["btnSend"]) ) {
+
+		//Hämta data från $_POST
+		$fgColor = $_POST["foregroundcolor"];
+		$bgColor = $_POST["backgroundcolor"];
+
+		//Skapa kakor
+		//setcookie("fgColor", $fgColor, time() + 3600);
+		//setcookie("bgColor", $bgColor, time() + 3600);
+
+		//Skapa sessionvariabler
+		$_SESSION["fgColor"] = $fgColor;
+		$_SESSION["bgColor"] = $bgColor;
+
+		//Sätt om variabler
+		$css = "body { color: $fgColor; background-color: $bgColor; }";
+		$disabled = false;
+
+	}
+
+	if( isset( $_POST["btnReset"] ) ) {
+
+		//ta bort kakor
+		//setcookie("fgColor", "", time() - 3600);
+		//setcookie("bgColor", "", time() - 3600);
+
+		//Töm sessioner och ta bort den sedan.
+		//session_unset();
+		//session_destroy();
+		deleteSession();
+
+	}
+
+	if( !isset($_POST["btnSend"]) && !isset($_POST["btnReset"]) &&
+		//isset($_COOKIE["fgColor"]) && isset($_COOKIE["bgColor"])) {
+			isset($_SESSION["fgColor"]) && isset($_SESSION["bgColor"])) {
+
+		//Hämta data från $_COOKIE
+		//$fgColor = $_COOKIE["fgColor"];
+		//$bgColor = $_COOKIE["bgColor"];
+
+		//Hämta data från $_SESSION
+		$fgColor = $_SESSION["fgColor"];
+		$bgColor = $_SESSION["bgColor"];
+
+		$css = "body { color: $fgColor; background-color: $bgColor; }";
+		$disabled = false;
+
+	}
+
+	//if( !isset($_POST["btnSend"]) && !isset($_POST["btnReset"]) &&
+	//	!isset($_SESSION["fgColor"]) && !isset($_SESSION["bgColor"])) {}
+
 ?>
 <!doctype html>
 <html lang="en" >

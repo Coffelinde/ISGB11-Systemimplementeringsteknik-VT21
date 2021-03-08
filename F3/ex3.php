@@ -29,8 +29,8 @@
 				echo( "<p>session_id() ger " . session_id() . "</p>" ); 
 				echo( "<p>session_name() ger " . session_name() . "</p>" ); 
 				
-				session_unset();
-				session_destroy();
+				//session_unset();
+				//session_destroy();
 			?>
 		</div>
 	</body>
