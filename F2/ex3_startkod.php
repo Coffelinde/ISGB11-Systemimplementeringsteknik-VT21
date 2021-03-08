@@ -1,6 +1,12 @@
 <?php
 
 	//Här skriver ni koden!
+
+	//defaultvärde för CSS-elementet
+	$css = "body { color: rgb(0,0,0); background-color: rgb(255,255,255); }";
+
+	//Flagga för om knappen skall vara användbar eller inte
+	$disabled = true;
 			
 ?>
 <!doctype html>
