@@ -43,7 +43,7 @@
 				print_r( $_POST );
 				echo( "</pre>" );
 
-				echo("<p> \$_SESSION</p>") . PHP_EOL;
+				echo("<p> \$_COOKIE</p>") . PHP_EOL;
 				echo( "<pre>" );
 				print_r( $_COOKIE );
 				echo( "</pre>" );
